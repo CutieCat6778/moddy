@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    background-color: #85b4df;
+    color: white;
+}
+/* Text-highlight */
+
+.hl-bg {
+    background-color: #1d1d1d;
+}
+
+.hl-bold {
+    font-weight: 900;
+}
+
+/* HEADER */
+header {
+    background-color: #4d90cc;
+    padding: 10rem 0rem;
+    color: white;
+    height: 15rem;
+}
+
+.img{
+    height: 30px;
+    width: 30px;
+    display: inline-block;    
+    position: relative;
+    top: 8px;
+    right: 5px;
+}

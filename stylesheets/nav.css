@@ -1,0 +1,30 @@
+/* NAVIGATION BAR */
+
+.btn-nav{
+    display: none;
+}
+
+nav {
+    margin-bottom: 0rem;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #2C2F33;
+    margin: 0;
+    padding: 1.5rem 2.50rem;
+    position: sticky;
+    display: block;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 1rem;
+    display: inline-block;
+}

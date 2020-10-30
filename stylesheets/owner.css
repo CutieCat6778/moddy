@@ -1,0 +1,36 @@
+body{
+    background-color:#0d0d0d;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+.title{
+    font-size: 30px;
+}
+.profilepic{
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 10px ;
+}
+.main-container{
+    margin-top: 150px;
+}
+.contact{
+    margin-top: 50px;
+}
+a{
+    margin-left:10px;
+}
+.judger{
+    border-radius: 100%;
+    width: 47px;
+    height: 47px;
+}
+.judger1{
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+.lang{
+    margin-top: 20px;
+}

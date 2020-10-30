@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commands</title>
+    <link rel="stylesheet" href="/stylesheets/commands.css">
+    <script src="/javascripts/script.js"></script>
+    <meta property="og:title" content="Moderator Bot" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.Moderator Bot-bot.tk" />
+    <meta property="og:description"
+        content="I am a moderation bot. I will help you to control your server and manage your server's members." />
+    <meta property="og:url" content="https://www.Moderator Bot-bot.tk" />
+    <meta name="theme-color" content="#4d90cc">
+    <meta property="og:image" content="https://cutiecat6778.github.io/cdn/pfp.png" />
+    <link rel="icon" href="https://cutiecat6778.github.io/cdn/pfp.png">
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="category" id='general-nav' onclick="general()">
+            Members
+        </div>
+        <div class="category" id='moderation-nav' onclick="moderation()">
+            Moderation
+        </div>
+        <div class="category" id='management-nav' onclick="management()">
+            Management
+        </div>
+        <div class="category" id='role-nav' onclick="role()">
+            Role management
+        </div>
+        <div class="category" id='chat-nav' onclick="chat()">
+            Chat management
+        </div>
+        <div class="category" id='info-nav' onclick="info()">
+            Infomations
+        </div>
+        <div class="category" id='api-nav' onclick="api()">
+            Api
+        </div>
+        <div class="category" id='tag-nav' onclick="tag()">
+            Tags
+        </div>
+        <div class="category" id='rules-nav' onclick="rules()">
+            Rules
+        </div>
+        <a class="category-home" href="/">
+            Return to home page
+        </a>
+    </div>
+    <div class="rules">
+        <strong class="rules-title">
+            How to read this documention ?
+        </strong>
+        <br>
+        <span class="rules-desc">
+            <span class="rules-desc-text"><span class="aliases">[aliases]</span> - this mean you can use this as a
+                command. For example you can use BANISH for BAN.</span>
+            <span class="rules-desc-text"><span class="hlight">(something)</span> - this mean you MUST add it into your
+                command</span>
+            <span class="rules-desc-text"><span class="hlight">[something]</span> - this is NOT required to add, but it
+                is better to add it.</span>
+            <span class="rules-desc-text"><span class="hlight">(prefix)</span> - after you invite the bot, just mentions
+                the bot to get your prefix.</span>
+            <span class="rules-desc-text"><span class="hlight">(@user)</span> - this mean you MUST mention a
+                member.</span>
+            <span class="rules-desc-text"><span class="hlight">(@role)</span> - this mean you MUST mention a
+                role.</span>
+            <span class="rules-desc-text"><span class="hlight">(#channel)</span> - this mean you MUST mention a
+                channel.</span>
+            <span class="rules-desc-text"><span class="hlight">[reason]</span> - this mean that you can add the reason,
+                why you do this command over that member.</span>
+        </span>
+    </div>
+    <div class="general-box" id="general">
+        <strong class="general-title">
+            Members commands - 5
+        </strong>
+        <div class="general-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Help </strong><span class="aliases">[help, h, hwlp]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) help</span><br>
+                    To get more help about Moderator Bot<br>
+                    <span class="hlight">(prefix) help [command]</span><br>
+                    To get more help about a command
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">AFK </strong><span class="aliases">[afk, notonline, offline]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) afk (afk status)</span><br>
+                    Setup your AFK mode, so when a user mentions you the bot will show them your AFK status
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Bug </strong><span class="aliases">[bug, problem, bugreport]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) bug (Problem info)</span><br>
+                    To report a bug/problem to developer and he will fix it.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Reminder </strong><span class="aliases">[remind, alert, reminder]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) remind [time] [test]</span><br>
+                    Remind you about something that verry importain
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Snipe </strong><span class="aliases">[snipe, lastmsg]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) snipe </span><br>
+                    Snipe the last deleted message
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="moderation-box" id="moderation">
+        <strong class="moderation-title">
+            Moderation commands - 12
+        </strong>
+        <div class="moderation-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Ban</strong> <span class="aliases">[ban, banish, ben]</span><br>
+                <span class="aliases">[ban, banish, ben]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) ban (@user) [reason] </span> <br>
+                    Ban a member in your server, he can't join the back until he got unban <br>
+                    <span class="hlight"> (prefix) ban [clear (days)] (@user) [reason]</span><br>
+                    Ban a member in your server and delete his last messages (max 7 days)
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Unban</strong> <span class="hlight">(prefix) unban (@user) [reason]</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[unban, unbanish, unben]</span><br>
+                    Remove a member ban, so after that the member can join back
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Kick</strong> <span class="hlight">(prefix) kick (@user) [reason]</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[kick, getout, kickout]</span><br>
+                    Kick a member, but after that the member can join back
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Mute</strong> <span class="aliases">[mute, m, mutee]</span><br>
+                <span class="aliases">[mute, m, mutee]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) mute (@user) [reason]</span><br>
+                    Mute a member, so he can't send messages or talk in vc anymore until he get unmute <br>
+                    <span class="hlight">(prefix) mute temp (time) (@user) [reason]</span>
+                    Mute a member for a number of time, after that time the member can talk freely
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Lockdown</strong><span class="aliases">[lockdown, lockd]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) lockdown</span><br>
+                    Lock a channel down that your server member can't write anymore<br>
+                    <span class="hlight">(prefix) lockdown [time]</span><br>
+                    Lock a channel down for a limit of time
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Unlock</strong><span class="aliases">[unlock, unl]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) unlock</span><br>
+                    Unlock a channel that has been locked down.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Unmute</strong> <span class="hlight">(prefix) unmute (@user) [reason]</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[unmute, unm, unmutee]</span><br>
+                    Unmute a member, so after that the member can talk freely
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Warn</strong> <span class="hlight">(prefix) warn (@user) [reason]</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[warn, wsrn, attention]</span><br>
+                    Warn a member, do command <span class="hlight">(prefix) help warn</span> for more infomations
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Nuke</strong> <span class="hlight">(prefix) nuke [@channel, channelID]</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[nuke, renew]</span><br>
+                    Renew a channel, boom
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Delete warn</strong> <span class="hlight">(prefix) deletewarn (@user)
+                    [reason]</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[deletewarn, delwarn, delwsrn]</span><br>
+                    It will automaticly delete one warn from that user, in case you warned a member for a accident
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Judge</strong> <span class="hlight">(prefix) judge (@user) [reason]</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[judge, sue]</span><br>
+                    Judge a member with voting function, after 15m, if there are more agree votes the member will be
+                    banned
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Cases</strong> <span class="hlight">(prefix) cases (case number)</span>
+                <br>
+                <span class="desc">
+                    <span class="aliases">[case, cases, caseinfo]</span><br>
+                    Fetch cases with numbers, so it will show you all infomations about that case
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="management-box" id="management">
+        <strong class="moderation-title">
+            Management commands - 5
+        </strong>
+        <div class="management-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Auto asign role </strong><span class="aliases">[autorole, autor, aar]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) autorole (setup) (@role)</span><br>
+                    Setup the auto asign role, that mean when user join your server, the bot will automaticly add this
+                    role to that user
+                    <br><span class="hlight">(prefix) autorole (setting) (true, false, @role)</span><br>
+                    Enable, disable the autorole or change the current role
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Wellcome message </strong><span class="aliases">[wellcome, wellc,
+                    welcome]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) wellcome (setup) (#channel)</span><br>
+                    Setup the wellcome message, that mean when user join your server, the bot will automaticly send a
+                    wellcome message to the specified channel
+                    <br><span class="hlight">(prefix) autorole (setting) (true, false, #channel)</span><br>
+                    Enable, disable the wellcome message or change the current channel
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Capcha </strong><span class="aliases">[captcha]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) capcha (setup)</span><br>
+                    Setup the capcha, that mean when user join your server, they have to do a small test first
+                    <br><span class="hlight">(prefix) autorole (setting) (true, false)</span><br>
+                    Enable or disable the capcha function
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Logger </strong><span class="aliases">[logs, log, logger]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) logs (setup) (#channel)</span><br>
+                    Setup the logging system, that mean when moderator use moderation commands, the bot will automaticly
+                    logs that in the specified channel
+                    <br><span class="hlight">(prefix) logs setting (true, false, #channel)</span><br>
+                    Enable, disable the logger or change the logs channel
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Prefix </strong><span class="aliases">[prefix, prefic, prefixes]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) prefix (new prefix)</span><br>
+                    Change your current prefix, but the prefix can't be 2 words
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <div class="role-box" id="role">
+        <strong class="general-title">
+            Role management commands - 5
+        </strong>
+        <div class="general-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Muterole</strong><span class="aliases">[muterole, mrole, mutero]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) muterole (@role, roleID)</span><br>
+                    Mute a role so after the user with that role can't talk anymore, until someone unmute that role.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Unmuterole</strong><span class="aliases">[unmuterole, unmrole,
+                    unmutero]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) unmuterole (@role, roleID)</span><br>
+                    Unmute a role so after the user with that role can talk freely
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Hoist</strong><span class="aliases">[hoist, displayrole, disrole]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) hoist (@role, roleID)</span><br>
+                    Make a role to display or not display in the member list.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Set color</strong><span class="aliases">[setcolor, setco, scolor]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) setcolor (@role, roleID) (color(HEX))</span><br>
+                    Change the role's color.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Delete role</strong><span class="aliases">[deleterole, delrole ,
+                    deletero]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) deleterole (@role, roleID)</span><br>
+                    Delete a role from your server.
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="chat-box" id="chat">
+        <strong class="general-title">
+            Chat management commands - 4
+        </strong>
+        <div class="general-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Text filter </strong><span class="aliases">[textfilter, badwords,
+                    noswear]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) textfilter (setup)</span><br>
+                    Setup the text filter, that mean when user swear it will alert the user and if they swear many
+                    times, they will get mute.
+                    <br><span class="hlight">(prefix) textfilter setting (true, false, badwords, cap, links, whitelist,
+                        blacklist)</span><br>
+                    Enable, disable some textfilter's functions or add some blacklist or whitelist
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Poll </strong><span class="aliases">[poll, pol, question]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) poll (question)</span><br>
+                    Ask members in your server about something
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Purge </strong><span class="aliases">[purge, clear, delmsg]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) clear (1 - 100 lines or max)</span><br>
+                    Delete many messages in one time, but the number lines can't be more then 100
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Slowmode </strong><span class="aliases">[slowmode, limit, slowm]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) slowmode (time)</span><br>
+                    Litmit the message per a number of time
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="api-box" id="api">
+        <strong class="moderation-title">
+            API commands - 4
+        </strong>
+        <div class="management-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Search</strong><span class="aliases">[search, google]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) search (topic)</span><br>
+                    Search in google about something
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Translate</strong><span class="aliases">[translate, trans]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) trans (text)</span><br>
+                    Translate a text to english
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Wikipedia</strong><span class="aliases">[wikipedia, wiki, defiene]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) wiki (topic)</span><br>
+                    Search in Wikipedia about something
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Weather</strong><span class="aliases">[weather, wether]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) weather (city/country)</span><br>
+                    Get weather infomations about a city or country
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="tag-box" id="tag">
+        <strong class="moderation-title">
+            Tags commands - 5
+        </strong>
+        <div class="management-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Tag</strong><span class="aliases">[tag, tags]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) tag (key-word)</span><br>
+                    Get a tag's content
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Add tag</strong><span class="aliases">[addtag, addtags, add-tag]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) addtag (key_word)</span><br>
+                    Add a new tag
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Change tag</strong><span class="aliases">[changetag, changetags,
+                    change-tags]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) changetag (key_word)</span><br>
+                    Change your tag's content
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Delete tag</strong><span class="aliases">[deletetag, deltag,
+                    deletetags]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) deletetag (key_word)</span><br>
+                    Delete your tag and until someone use that key word to add a new tag name
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Tag info</strong><span class="aliases">[taginfo, tag-info, tag_info]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) taginfo (key_word)</span><br>
+                    Get a tag's infomations
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="rules-box" id="rules">
+        <strong class="moderation-title">
+            Rules commands - 4
+        </strong>
+        <div class="management-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Rule</strong><span class="aliases">[tag, tags]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) rule (rule_number, display, setup)</span><br>
+                    Rule setup, get rule content or display all rules
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Add rule</strong><span class="aliases">[addrule, addrules]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) addrule</span><br>
+                    Add a new rule to the rule list
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Edit rule</strong><span class="aliases">[editrule, editrules]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) editrule (rule_number)</span><br>
+                    Edit a rule from rule list
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Reset tag</strong><span class="aliases">[resetrule, resetrules]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) resetrule (rule_number)</span><br>
+                    Reset the rules of your server
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="info-box" id="info">
+        <strong class="moderation-title">
+            Infomations commands - 8
+        </strong>
+        <div class="management-cmds">
+            <div class="cmd-info">
+                <strong class="cmd-title">Avatar </strong><span class="aliases">[avatar, pfp, av]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) avatar (@user)</span><br>
+                    To see a member's profile picture, but in bigger image
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Stats </strong><span class="aliases">[stat, botinfo]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) stats </span><br>
+                    To get my global stats, to see how big i am
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Ping </strong><span class="aliases">[ping, pinng]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) ping </span><br>
+                    To get my ping in your server, alway less then 200ms
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">My permissions </strong><span class="aliases">[mypermissions, myperms,
+                    mperms]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) mypermissions </span><br>
+                    To get all of your permissions in that server.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">My warn </strong><span class="aliases">[mywarn, mywarns, mwarn]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) mywarns </span><br>
+                    To get infomations about last warn or nothing
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Server info</strong><span class="aliases">[serverinfo, sinfo,
+                    serverdesc]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) serverinfo</span><br>
+                    Get all infomations about that current server.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">User info</strong><span class="aliases">[userinfo, uinfo, whois]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) userinfo (@user, userID)</span><br>
+                    Get all infomations about you or someone that you mentioned.
+                </span>
+            </div>
+            <div class="cmd-info">
+                <strong class="cmd-title">Role info</strong><span class="aliases">[roleinfo, rinfo]</span>
+                <br>
+                <span class="desc">
+                    <span class="hlight">(prefix) roleinfo [@role, roleID]</span><br>
+                    Get all infomations about you or someone that you mentioned.
+                </span>
+            </div>
+        </div>
+    </div><br>
+    <span class="copyright">
+        © 2020 CutieCat#6778 All Rights Reserved
+    </span>
+</body>
+
+</html>
