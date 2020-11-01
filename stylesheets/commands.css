@@ -65,6 +65,9 @@ body{
 .role-box{
     display: none;
 }
+.back2home{
+    display: none;
+}
 @media only screen and (max-width: 600px){
     body{
         margin-left: -200px;
@@ -101,6 +104,11 @@ body{
     }
     .role-box{
         display: block;
+    }.back2home{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        display: inline-block;
     }
 }
 .category-home{
