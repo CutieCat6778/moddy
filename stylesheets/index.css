@@ -2,14 +2,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     text-decoration: none;
-    margin: 0;
+    margin: 0px;
     background-color: #85b4df;
-    color: #313131;
+    color: #111;
 }
 
 /* HEADER */
+
 header {
-    background-color: #4d90cc;
+    background-color: #134c81;
     padding: 10rem 0rem;
     color: white;
     height: 15rem;
@@ -30,157 +31,120 @@ header div a {
     color: white;
     font-size: 1.3rem;
     margin-left: 1.5rem;
-    background-color: #313131;
+    background-color: #111;
     padding: 0.75rem 2.25rem;
     border-radius: 0.5rem;
 }
 
 section {
-    background-color: #313131;
+    background-color: #111;
     color: white;
-    padding: 5rem 35rem;
-    height: 37rem;
+    padding: 5rem 0;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+div.box img {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+}
+
+div.others {
+    max-width: 900px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    display: block;
+}
+
+div.others:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.box {
+    user-select: none;
+    font-weight: 600;
+    max-width: 300px;
+    float: left;
+    width: 33.33%;
+}
+
+strong.a {
+    background-color: #111;
+    margin-top: 0px;
     width: auto;
+    height: auto;
+}
+
+div.box strong {
+    font-size: 1.5rem;
+    margin-bottom: 7px;
+    margin-left: 4px;
     display: block;
 }
 
-.short-description {
-    margin-bottom: 1rem;
+span.desc {
+    font-size: 1.0rem;
+    font-weight: 300;
 }
 
-img {
-    width: 580px;
-    height: 350px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-section div strong {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 1rem;
-}
-
-
-
-.copy {
-    margin-top: 5rem;
+strong.title {
+    font-size: 2.7rem;
+    text-align: left;
     display: block;
 }
-.btn-nav {
-    display: none;
-}
-nav ul {
-    display: block;
-}
-nav ul.a {
-    display: none;
-}
-@media only screen and (max-width: 550px) and (min-width: 300px) {
-    img {
-        display: none;
+
+@media only screen and (max-width: 1000px) {
+    body{
+        margin: 0px 0px;
+    }
+    header{
+        background-color: #134c81;
+        padding: 10rem 0rem;
+        color: white;
+        height: 15rem;
+        width: 102.5%;
+        display: block;
+    }
+    nav{
+        width: 102.5%;
     }
     section {
-        background-color: #313131;
+        background-color: #111;
         color: white;
-        padding: 5rem 5rem;
-        height: 70%;
+        padding: 5rem 0.35rem;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+    }
+    div.others {
+        max-width: 900px;
+        margin: 0;
         width: auto;
+        padding: 10px;
         display: block;
     }
-    header strong {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    .head-container-links a {
+    div.others:after {
+        content: "";
         display: block;
-        margin-top: 1rem;
+        clear: both;
     }
-    section div strong {
-        font-size: 1.5rem;
-        display: block;
-        margin-bottom: 1rem;
-    }
-}
-
-@media only screen and (max-width: 1000px) and (min-width: 551px) {
-    img {
-        display: none;
-    }
-    section {
-        background-color: #313131;
-        color: white;
-        padding: 5rem 7rem;
-        height: 80%;
-        width: auto;
+    .head-container-links{
         display: block;
     }
-    header strong {
-        font-size: 2.5rem;
-    }
-    section div strong {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-}
-
-@media only screen and (max-width: 1500px) and (min-width: 1001px) {
-    .btn-nav {
-        display: none;
-    }
-    img {
-        width: 580px;
-        height: 350px;
+    a{
         display: block;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 10px;
     }
-    section {
-        background-color: #313131;
-        color: white;
-        padding: 5rem 10rem;
-        height: 70%;
-        width: auto;
+    strong.google{
         display: block;
-    }
-    header strong {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    section div strong {
-        font-size: 1.5rem;
-        display: block;
-        margin-bottom: 1rem;
-    }
-}
-
-@media only screen and (max-width: 1759px) and (min-width: 1501px) {
-    .btn-nav {
-        display: none;
-    }
-    img {
-        width: 580px;
-        height: 350px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    section {
-        background-color: #313131;
-        color: white;
-        padding: 5rem 25rem;
-        height: 70%;
-        width: auto;
-        display: block;
-    }
-    header strong {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-    section div strong {
-        font-size: 1.5rem;
-        display: block;
-        margin-bottom: 1rem;
     }
 }
