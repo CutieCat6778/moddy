@@ -3,8 +3,8 @@ body {
     text-align: center;
     text-decoration: none;
     margin: 0px;
-    background-color: #85b4df;
-    color: #111;
+    background-color: #111;
+    color: white;
 }
 
 /* HEADER */
@@ -14,6 +14,7 @@ header {
     padding: 10rem 0rem;
     color: white;
     height: 15rem;
+    width: 101%;
 }
 
 header strong {
