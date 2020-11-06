@@ -28,7 +28,24 @@ li a {
     margin-left: 1rem;
     display: inline-block;
 }
+li a.a {
+    transition: 0.5s;
+    position: relative;
+    top: 5px
+}
+
+li a.a:hover{
+    font-weight: 600;
+}
 
 li a strong{
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    li a.a {
+        transition: 0.5s;
+        position: relative;
+        top: -5px
+    }
 }
