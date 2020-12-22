@@ -205,7 +205,7 @@ function role() {
     document.getElementById("role-nav").style.background = "#7289da";
     document.getElementById("role").style.display = "block";
 }
-function role() {
+function text() {
     document.getElementById("general").style.display = "none";
     document.getElementById("management").style.display = "none";
     document.getElementById("moderation").style.display = "none";
